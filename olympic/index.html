@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./style.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row text-center">
+		<h2 ><span>  Olympic Medals <small><span class="men">Men </span>and<span class="women" > Women</span> </small>
+		<button type="button" id="all" class="btn btn-default hidden" onclick='isCollectiveBarChart=true;layout();'><span class="glyphicon glyphicon-stats"></span></button></span>
+		</h2>
+		<h4 id="intro">We have 29216 medals in total from 1896 to 2008. Select a bar to explore.</h4>		
+	</div>	
+	<div class="row hidden" id='option'>
+	<div class="row">
+		<div class="col-lg-5 col-md-5 col-sm-5 col-xs-4 text-right">
+			<div  class="btn-group btn-group-xs" data-toggle="buttons">		
+				<label class="btn btn-default active" id="noc" name='countries' onchange="Comparison(Thisyear)">
+   					 <input type="radio" name="options" id="option1" autocomplete="off" checked>countries
+  				</label>
+  				<label class="btn btn-default" id="discipline" name='disciplines' onchange="Comparison(Thisyear)">
+  		 			 <input type="radio" name="options" id="option2" autocomplete="off" >disciplines
+  				</label>
+  			</div>
+  		</div>
+  		<div class="text-left col-lg-7 col-md-7 col-sm-7 col-xs-8">
+			<h4>There are <span id="total"></span> <span id="type"></span> in  <span id="year"></span> Olypmic Game.</h4>
+		</div>
+	</div>
+	<div class="row text-center">
+		<section id='key'></section>
+	</div>
+	</div>
+	<div class="row"><section class="canvas" id="canvas"></section></div>
+	<div class="row">
+    <div class="custom-tooltip left men col-lg-2 col-lg-offset-1 col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-1 col-xs-4">
+    	<p class="info"></p>
+        <h3 class="percent"></h3>
+        <p class="num text-muted"></p>
+    </div>
+    <div class="custom-tooltip right women col-lg-2 col-lg-offset-9 col-md-3 col-md-offset-9 col-sm-3 col-xs-4 col-sm-offset-9 col-xs-offset-7">
+    	<p class="info"></p>
+        <h3 class="percent"></h3>
+        <p class="num text-muted"></p>
+    </div>
+    </div>
+    <div class="bio-tooltip text-center">
+    	<p class="info"></p>
+		<p><span class="percent"></span>  <span><small>  Men</small></span></p>
+		<p class="text-muted"><span>Year: </span><span class="theyear"></span></p>
+        <p class="text-muted"><span>Medals: </span><span class="num"></span></p>
+    </div>
+</div>
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src='../bootstrap-3.3.7-dist/js/bootstrap.min.js'></script>
+<script src="../d3.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+body{
+	background-color: #f7f7f7;
+    font-family:  Calibri,Sans-Serif, Helvetica, Verdana;
+}
+.canvas{
+    width:100%;
+    min-height:550px;
+    margin: 0 auto;
+}
+
+.btn.active.focus, .btn.focus{
+	outline: none;
+}
+.container{
+    position:relative;
+}
+
+#key,#intro{
+	padding-top: 20px; 
+}
+
+.country text{
+	fill: #333;
+	font-size: .68em;
+}
+
+.node{
+	opacity: .3;
+	stroke:white;
+	stroke-width:.1px;
+
+}
+.selected, .unenter{
+	opacity: 1;
+}
+.selected text, .unenter text{
+	opacity: 1;
+}
+.men{
+	color: #2ea7e0;
+}
+.women{
+	color: #e61673;
+}
+.menbar{
+	fill:#2ea7e0;
+}
+.womenbar{
+	fill:#e61673;;
+}
+
+.btn-group{
+	margin-top: 10px;
+}
+
+.custom-tooltip{
+    position:absolute;
+    padding:10px 25px;
+    top:123px;
+}
+
+.custom-tooltip .percent{
+	font-size: 2.7em;
+	font-weight: 700;
+
+}
+.custom-tooltip .info{
+ 	color:#333;
+ 	font-size: 1.6em;
+}
+
+.bio-tooltip{
+
+    position:absolute;
+    width:160px;
+    min-height:50px;
+    padding:20px 15px 20px 15px;
+    background:white;
+    box-shadow: 0 2px 2px 0px rgba(0,0,0,.1);
+    top:0;
+    left:0;
+    visibility:hidden;
+    opacity:0;
+}
+.bio-tooltip .percent{
+    font-size:1.8em;
+}
+.bio-tooltip .info{
+    font-size:1.2em;
+}
